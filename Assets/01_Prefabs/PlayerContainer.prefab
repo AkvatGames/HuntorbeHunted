@@ -1,0 +1,187 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3189351901644427031
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3669131063505794763}
+  m_Layer: 0
+  m_Name: PlayerAlive
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3669131063505794763
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3189351901644427031}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3962107526049877586}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4299261646802142638
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8221988809347100238}
+  m_Layer: 0
+  m_Name: PlayerDead
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8221988809347100238
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4299261646802142638}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3962107526049877586}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8445366605936475283
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3962107526049877586}
+  - component: {fileID: 7174531191615003972}
+  - component: {fileID: 5308744623686544028}
+  - component: {fileID: 5878264121391524697}
+  - component: {fileID: 6478897036498429484}
+  m_Layer: 0
+  m_Name: PlayerContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3962107526049877586
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8445366605936475283}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3669131063505794763}
+  - {fileID: 8221988809347100238}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7174531191615003972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8445366605936475283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 222dfdfaa49ee4f7dad885a5b7ccac1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathExplosionParticle: {fileID: 0}
+  deathAudioClip: {fileID: 0}
+  maximumLives: 0
+  respawnTimer: 0
+--- !u!114 &5308744623686544028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8445366605936475283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39c4f626d69d14db893187e4a62bec3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  primaryWeaponDamage: 1
+  secondaryWeaponDamage: 25
+  specialWeaponDamage: 100
+  maximumHealth: 100
+  currentHealth: 0
+  maximumArmour: 100
+  currentArmour: 0
+  maximumShield: 100
+  currentShield: 0
+  maximumBoost: 100
+  currentBoost: 0
+  maximumSpeed: 0
+  maximumReverseSpeed: 0
+  boostRate: 0
+  turnRate: 0
+  accelerationRate: 0
+  deccelerationRate: 0
+  currentSpeed: 0
+  primaryWeaponCooldown: 0
+  secondaryWeaponCooldwon: 0
+  shieldCooldown: 0
+--- !u!114 &5878264121391524697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8445366605936475283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04b6f9d8246fc49d3aae44e5af74800a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  machinegunFirePoints: []
+  secondaryFirePoints: []
+  machinegunBulletPrefab: {fileID: 0}
+  missilePrefab: {fileID: 0}
+  homingMissilePrefab: {fileID: 0}
+  powerMissilePrefab: {fileID: 0}
+  primaryMuzzleFlashPrefab: {fileID: 0}
+  secondaryMuzzleFlashPrefab: {fileID: 0}
+  primaryProjectileAudioClip: {fileID: 0}
+  secondaryProjectileAudioClip: {fileID: 0}
+  primaryFireRate: 0
+  secondaryFireRate: 0
+  isPlayer: 1
+--- !u!114 &6478897036498429484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8445366605936475283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddf301bb2fba14f13b299cb45c9a787d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
