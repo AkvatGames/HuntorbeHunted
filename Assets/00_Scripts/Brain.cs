@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -12,6 +10,8 @@ public class Brain : MonoBehaviour
     public bool targetDetected;
     public bool isPlayer;
 
+    private NavMeshAgent agent;
+
     Vector3 destination;
     public GameObject playerObject;
 
@@ -20,19 +20,17 @@ public class Brain : MonoBehaviour
     void Start()
     {
         //steup the AI's senses (seeing, hearing)
-        //agent = GetComponent<NavMeshAgent>();
         eyes = GetComponentInChildren<Eyes>();
+        ears = GetComponentInChildren<Ears>();
         weaponManager = GetComponent<WeaponManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (player.isVisible | player.isAudible)
-        //{
         if (eyes != null)
         {
-            if (eyes.targetSeen)// | ears.targetHeard)
+            if (eyes.targetSeen || ears.targetHeard)
             {
                 //a target has been detected!!!
                 targetDetected = true;
@@ -43,34 +41,17 @@ public class Brain : MonoBehaviour
             }
         }
 
-
-        if (Input.GetKey(KeyCode.Space) && !isPlayer)// && eyes.targetSeen)// && targetDetected)
-        {
-            //isActive = true;
-            //transform.LookAt(playerObject.transform.position);
-            weaponManager.Fire2();
-        }
-        else// if (!isPlayer)// && targetDetected)
-        {
-            weaponManager.Fire1();
-        }
-        //}
-
-
-        if (targetDetected)
-        {
-
-        }
-
-        if (!targetDetected)
-        {
-
-        }
+        
 
         if (Vector3.Distance(destination, playerObject.transform.position) > 1.0f)
         {
             destination = playerObject.transform.position;
         }
+    }
+
+    void SetTarget()
+    {
+
     }
 
     void Idle()
@@ -80,7 +61,7 @@ public class Brain : MonoBehaviour
 
     void MoveTowards()
     {
-        //agent.destination = playerObject.transform.position;
+        agent.destination = playerObject.transform.position;
     }
 
     void Patrol()
@@ -90,7 +71,10 @@ public class Brain : MonoBehaviour
 
     void Attack()
     {
-        Debug.Log("Attack!");
-
+        if (targetDetected && agent.remainingDistance <= agent.stoppingDistance)
+        {
+            weaponManager.Fire1();
+            Debug.Log("Attack!");
+        }
     }
 }
