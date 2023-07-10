@@ -11,6 +11,8 @@ public class Eyes : MonoBehaviour
     private SphereCollider detection_collider;
     private Coroutine detect_player;
 
+    public float visionRange;
+
     private void Awake()
     {
         detection_collider = GetComponent<SphereCollider>();
@@ -105,5 +107,18 @@ public class Eyes : MonoBehaviour
             new Vector3(bounds.max.x, bounds.max.y, bounds.min.z)
         };
         return bounding_points;
+    }
+
+    private void DrawVisionSphere()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, visionRange);
+    }
+
+    private void OnDrawGizmos()
+    {
+        // Draw the hearing range sphere
+        DrawVisionSphere();
+
     }
 }

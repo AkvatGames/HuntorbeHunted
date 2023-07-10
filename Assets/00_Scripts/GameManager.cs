@@ -21,8 +21,6 @@ public class GameManager : MonoBehaviour
     public TMP_Text shieldRemainingText;
     public TMP_Text boostRemainingText;
 
-
-
     //Bool Tool
     public bool isInMenu;
     public bool isInGame;
