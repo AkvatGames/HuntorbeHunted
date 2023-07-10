@@ -4,9 +4,8 @@ public class Stats : MonoBehaviour
 {
     [Space(5)]
     [Header("Weapons")]
-    public float primaryWeaponDamage = 1.0f;
-    public float secondaryWeaponDamage = 25.0f;
-    public float specialWeaponDamage = 100.0f;
+    public Weapon primaryWeapon;
+    public Weapon secondaryWeapon;
 
     [Space(5)]
     [Header("Vitality Stats")]
@@ -26,10 +25,4 @@ public class Stats : MonoBehaviour
     public bool canMove;
     public bool canRun;
     public bool canJump;
-
-    [Space(5)]
-    [Header("Stat Cooldowns")]
-    public float primaryWeaponCooldown;
-    public float secondaryWeaponCooldwon;
-    public float shieldCooldown;
 }

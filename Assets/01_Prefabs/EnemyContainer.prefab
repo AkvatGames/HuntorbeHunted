@@ -42,6 +42,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4597747280703447444}
+  - component: {fileID: 3113856252553902141}
   m_Layer: 0
   m_Name: EnemyDead
   m_TagString: Untagged
@@ -64,6 +65,28 @@ Transform:
   m_Father: {fileID: 7872663933337203785}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &3113856252553902141
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739822289464943510}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1e145879247134e14911259b6c99b572, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1762732381671357284
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,11 +166,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7489434818109222610}
-  - component: {fileID: 6925610186379340263}
-  - component: {fileID: 9032357980375506799}
-  - component: {fileID: 5303926980425252310}
-  - component: {fileID: 592662085438677065}
-  - component: {fileID: 4740530970587385839}
+  - component: {fileID: 2060622504203429392}
   - component: {fileID: 5510686614692088065}
   m_Layer: 0
   m_Name: EnemyAlive
@@ -173,100 +192,28 @@ Transform:
   m_Father: {fileID: 7872663933337203785}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6925610186379340263
-MonoBehaviour:
+--- !u!95 &2060622504203429392
+Animator:
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2625832160760926349}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7bd9f88f829df4ca4a2492db3554ac7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &9032357980375506799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2625832160760926349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8f5ad170bec84cfb97dd18a42f13293, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetDetected: 0
-  isPlayer: 0
-  playerObject: {fileID: 8445366605936475283, guid: f31a9b010cb5943358f85fcd09a3a7ae,
-    type: 3}
---- !u!114 &5303926980425252310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2625832160760926349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 222dfdfaa49ee4f7dad885a5b7ccac1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitParticles: {fileID: 0}
-  deathParticles: {fileID: 0}
-  hitAudioClip: {fileID: 0}
-  deathAudioClip: {fileID: 0}
-  gameOverScreen: {fileID: 0}
-  victoryScreen: {fileID: 0}
---- !u!114 &592662085438677065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2625832160760926349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39c4f626d69d14db893187e4a62bec3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  primaryWeaponDamage: 1
-  secondaryWeaponDamage: 25
-  specialWeaponDamage: 100
-  maximumHealth: 100
-  currentHealth: 0
-  runSpeed: 0
-  walkSpeed: 0
-  currentSpeed: 0
-  primaryWeaponCooldown: 0
-  secondaryWeaponCooldwon: 0
-  shieldCooldown: 0
---- !u!114 &4740530970587385839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2625832160760926349}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04b6f9d8246fc49d3aae44e5af74800a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  machinegunFirePoints: []
-  secondaryFirePoints: []
-  machinegunBulletPrefab: {fileID: 0}
-  missilePrefab: {fileID: 0}
-  homingMissilePrefab: {fileID: 0}
-  powerMissilePrefab: {fileID: 0}
-  primaryMuzzleFlashPrefab: {fileID: 0}
-  secondaryMuzzleFlashPrefab: {fileID: 0}
-  primaryProjectileAudioClip: {fileID: 0}
-  secondaryProjectileAudioClip: {fileID: 0}
-  primaryFireRate: 0
-  secondaryFireRate: 0
-  isPlayer: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 942467279a291457ea5c1849b09770dd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!195 &5510686614692088065
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -477,6 +424,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7872663933337203785}
+  - component: {fileID: 4250628871838281222}
+  - component: {fileID: 3292591464936121306}
+  - component: {fileID: 8438083212828278887}
+  - component: {fileID: 8457679826354883096}
+  - component: {fileID: 3963268537698461443}
   m_Layer: 0
   m_Name: EnemyContainer
   m_TagString: Untagged
@@ -501,3 +453,101 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4250628871838281222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8372265588678547073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd9f88f829df4ca4a2492db3554ac7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3292591464936121306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8372265588678547073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39c4f626d69d14db893187e4a62bec3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  primaryWeaponDamage: 1
+  secondaryWeaponDamage: 25
+  specialWeaponDamage: 100
+  maximumHealth: 100
+  currentHealth: 0
+  maximumStamina: 100
+  currentStamina: 0
+  runSpeed: 10
+  walkSpeed: 5
+  currentSpeed: 0
+  canMove: 0
+  canRun: 0
+  canJump: 0
+  primaryWeaponCooldown: 0
+  secondaryWeaponCooldwon: 0
+  shieldCooldown: 0
+--- !u!114 &8438083212828278887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8372265588678547073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8f5ad170bec84cfb97dd18a42f13293, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetDetected: 0
+  isPlayer: 0
+  playerObject: {fileID: 0}
+--- !u!114 &8457679826354883096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8372265588678547073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 222dfdfaa49ee4f7dad885a5b7ccac1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitParticles: {fileID: 0}
+  deathParticles: {fileID: 0}
+  hitAudioClip: {fileID: 0}
+  deathAudioClip: {fileID: 0}
+  gameOverScreen: {fileID: 0}
+  victoryScreen: {fileID: 0}
+--- !u!114 &3963268537698461443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8372265588678547073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04b6f9d8246fc49d3aae44e5af74800a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  machinegunFirePoints: []
+  secondaryFirePoints: []
+  machinegunBulletPrefab: {fileID: 0}
+  missilePrefab: {fileID: 0}
+  homingMissilePrefab: {fileID: 0}
+  powerMissilePrefab: {fileID: 0}
+  primaryMuzzleFlashPrefab: {fileID: 0}
+  secondaryMuzzleFlashPrefab: {fileID: 0}
+  primaryProjectileAudioClip: {fileID: 0}
+  secondaryProjectileAudioClip: {fileID: 0}
+  primaryFireRate: 0
+  secondaryFireRate: 0
+  isPlayer: 1
