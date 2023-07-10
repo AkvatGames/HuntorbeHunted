@@ -61,7 +61,7 @@ public class Ears : MonoBehaviour
 
     private void DrawHearingSphere()
     {
-        Gizmos.color = Color.red;
+        Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, hearingRange);
     }
 

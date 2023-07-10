@@ -111,7 +111,7 @@ public class Eyes : MonoBehaviour
 
     private void DrawVisionSphere()
     {
-        Gizmos.color = Color.red;
+        Gizmos.color = Color.cyan;
         Gizmos.DrawWireSphere(transform.position, visionRange);
     }
 
