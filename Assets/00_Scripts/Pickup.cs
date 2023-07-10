@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Pickup : MonoBehaviour
@@ -8,13 +7,9 @@ public class Pickup : MonoBehaviour
 
     //Bools setting up different pickup types
     public bool healthPickup;
-    public bool armourPickup;
-    public bool boostPickup;
     public bool weaponPickup;
 
     public float healAmount;
-    public float armourAmount;
-    public float boostAmount;
 
     public float respawnTimer;
 
@@ -40,25 +35,12 @@ public class Pickup : MonoBehaviour
 
                     StartCoroutine(Collected());
                 }
-
-                else if (armourPickup && stats.currentArmour < stats.maximumArmour)
-                {
-                    stats.currentArmour += armourAmount;
-
-                    if (stats.currentArmour > stats.maximumArmour)
-                    {
-                        stats.currentArmour = stats.maximumArmour;
-                    }
-                    StartCoroutine(Collected());
-                }
-
             }
         }
         else
         {
             return;
         }
-
     }
 
     IEnumerator Collected()
