@@ -5,7 +5,7 @@ public class Brain : MonoBehaviour
 {
     private Eyes eyes;
     private Ears ears;
-    private WeaponManager weaponManager;
+    private Weapon weapon;
 
     public bool targetDetected;
     public bool isPlayer;
@@ -22,7 +22,7 @@ public class Brain : MonoBehaviour
         //steup the AI's senses (seeing, hearing)
         eyes = GetComponentInChildren<Eyes>();
         ears = GetComponentInChildren<Ears>();
-        weaponManager = GetComponentInChildren<WeaponManager>();
+        weapon = GetComponentInChildren<Weapon>();
     }
 
     // Update is called once per frame
@@ -71,15 +71,15 @@ public class Brain : MonoBehaviour
 
     void Attack()
     {
-        if (weaponManager != null)
+        if (weapon != null)
         {
             if (targetDetected && agent.remainingDistance <= agent.stoppingDistance)
             {
-                weaponManager.Fire1();
+                weapon.Fire();
                 Debug.Log("Attack!");
             }
         }
-        else if (weaponManager == null)
+        else if (weapon == null)
         {
             // setup melee attack here
         }
