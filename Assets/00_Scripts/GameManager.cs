@@ -10,9 +10,6 @@ public class GameManager : MonoBehaviour
 
     public GameObject playerObject;
     float playerHealth;
-    float playerArmour;
-    float playerShield;
-    float playerBoost;
 
     public TMP_Text enemiesRemainingText;
     public TMP_Text livesRemainingText;
@@ -58,10 +55,6 @@ public class GameManager : MonoBehaviour
         PrintEnemies();
         PrintLives();
         PrintHealth();
-        PrintArmour();
-        PrintShield();
-        PrintBoost();
-
     }
 
     void GetHealth()
@@ -74,39 +67,6 @@ public class GameManager : MonoBehaviour
         GetHealth();
         healthRemainingText.text = ("Health: " + playerHealth);
 
-    }
-
-    void GetBoost()
-    {
-        playerBoost = playerObject.GetComponent<Stats>().currentBoost;
-    }
-
-    public void PrintBoost()
-    {
-        GetBoost();
-        boostRemainingText.text = ("Boost: " + playerBoost);
-    }
-
-    void GetArmour()
-    {
-        playerArmour = playerObject.GetComponent<Stats>().currentArmour;
-    }
-
-    public void PrintArmour()
-    {
-        GetArmour();
-        armourRemainingText.text = ("Armour: " + playerArmour);
-    }
-
-    void GetShield()
-    {
-        playerShield = playerObject.GetComponent<Stats>().currentShield;
-    }
-
-    public void PrintShield()
-    {
-        GetShield();
-        shieldRemainingText.text = ("Shield: " + playerShield);
     }
 
     void GetLives()
