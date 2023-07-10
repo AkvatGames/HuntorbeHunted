@@ -14,6 +14,8 @@ public class Stats : MonoBehaviour
     [Header("Vitality Stats")]
     public float maximumHealth = 100.0f;
     [HideInInspector] public float currentHealth;
+    public float maximumStamina = 100.0f;
+    [HideInInspector] public float currentStamina;
 
     [Space(5)]
     [Header("Movement Stats")]
@@ -21,6 +23,11 @@ public class Stats : MonoBehaviour
     public float walkSpeed;
     [HideInInspector] public float currentSpeed;
 
+    [Space(5)]
+    [Header("Movement Bools")]
+    public bool canMove;
+    public bool canRun;
+    public bool canJump;
 
     [Space(5)]
     [Header("Stat Cooldowns")]
