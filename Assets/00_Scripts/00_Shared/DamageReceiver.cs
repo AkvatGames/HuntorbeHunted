@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class DamageReceiver : MonoBehaviour
 {
+    private Stats stats;
+
     [Space(5)]
     [Header("References")]
-    private Stats stats;
-    public ParticleSystem hitParticles;
-    public ParticleSystem deathParticles;
+    public GameObject hitParticlesPrefab;
+    public GameObject deathParticlesPrefab;
     public AudioClip hitAudioClip;
     public AudioClip deathAudioClip;
 
@@ -25,13 +26,13 @@ public class DamageReceiver : MonoBehaviour
         if (stats.currentHealth > 0)
         {
             PlayHitAudioClip();
-            Instantiate(hitParticles, transform.position, transform.rotation);
+            Instantiate(hitParticlesPrefab, transform.position, transform.rotation);
             Debug.Log("Health:" + stats.currentHealth);
         }
         else if (stats.currentHealth <= 0)
         {
             PlayDeathAudioClip();
-            Instantiate(deathParticles, transform.position, transform.rotation);
+            Instantiate(deathParticlesPrefab, transform.position, transform.rotation);
             stats.currentHealth = 0;
             Debug.Log("DEAD!!!");
             Destroy(gameObject, 0.05f);
